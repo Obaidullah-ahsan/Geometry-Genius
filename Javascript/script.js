@@ -57,6 +57,14 @@ function calculatePentagon() {
     const area = 0.5 * pentagonPerimeter * pentagonApothem;
     setInnerTexById('pentagon-span', area);
 }
+// Ellipse
+function calculateEllipse(){
+    const axisA = getValueInputById('axis-a');
+    const axisb = getValueInputById('axis-b');
+    const area = Math.PI*axisA*axisb;
+    setInnerTexById('ellipse-span', area.toFixed(2));
+    
+}
 
 // Reuseable function
 function getValueInputById(inputValue) {
@@ -71,3 +79,17 @@ function setInnerTexById(elementId, area) {
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+
+
+// function getValueInputById(inputValue){
+//     const inputfield = document.getElementById(inputValue);
+//     const inputValueText = inputfield.value;
+//     const inputValueRepeat = parseFloat(inputValueText);
+//     inputfield.value = '';
+//     return inputValueRepeat;
+// }
+
+// function setInnerTexById(elementId,area){
+//     const element = document.getElementById(elementId);
+//     element.innerText=area;
+// }
